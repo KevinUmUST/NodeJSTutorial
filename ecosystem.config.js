@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'tutorial-2',
+    name: 'NodeJSTutorial',
     script: './index.js'
   }],
   deploy: {
@@ -10,7 +10,7 @@ module.exports = {
       key: '~/.ssh/github',
       ref: 'origin/master',
       repo: 'git@github.com:KevinUmUST/NodeJSTutorial.git',
-      path: '/home/NodeJSTutorial/',
+      path: '/home/ec2-user/NodeJSTutorial/',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
